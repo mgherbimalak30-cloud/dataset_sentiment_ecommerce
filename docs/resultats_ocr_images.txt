@@ -1,0 +1,28 @@
+﻿I01.png attendu=positif predit=neutre conf=0.4156 ERREUR | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIEN 101.png AVIS CLIENT VERIFIE — * 4% Livraison express et produit parfait ! Je recommanderai sans hésiter.
+   attendu : AVIS CLIENT VÉRIFIÉ — ★★★★★ Livraison express et produit parfait ! Je recommanderai sans hésiter.
+I02.png attendu=negatif predit=negatif conf=0.3956 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIEN 102.png RECLAMATION COMMANDE #9921 Colis ouvert et article manquant. Service client injoignable, inadmissible !
+   attendu : RÉCLAMATION COMMANDE #9921 Colis ouvert et article manquant. Service client injoignable, inadmissible !
+I03.png attendu=neutre predit=neutre conf=0.6213 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIENT — 103.png SUIVI DE LIVRAISON #4510 Votre colis a été déposé en point relais. Poids du paquet : 1,2 kg.
+   attendu : SUIVI DE LIVRAISON #4510 Votre colis a été déposé en point relais. Poids du paquet : 1,2 kg.
+I04.png attendu=positif predit=positif conf=0.6297 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIENT — 104.png POST RESEAU SOCIAL — @ClientHeureux Incroyable qualité pour ce prix ! Merci pour la rapidité d'expédition.
+   attendu : POST RÉSEAU SOCIAL — @ClientHeureux Incroyable qualité pour ce prix ! Merci pour la rapidité d'expédition.
+I05.png attendu=negatif predit=negatif conf=0.5154 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIEN 105.png CAPTURE D'ECRAN — RETOUR PRODUIT L'appareil ne s'allume plus aprés 2 jours. Trés mauvaise expérience d'achat.
+   attendu : CAPTURE D'ÉCRAN — RETOUR PRODUIT L'appareil ne s'allume plus après 2 jours. Très mauvaise expérience d'achat.
+I06.png attendu=neutre predit=neutre conf=0.663 OK | mots OCR corrects=93%
+   OCR     : CAPTURE AVIS CLIEN 106.png FICHE PRODUIT — SPECIFICATIONS Modéle standard livré avec cable USB. Dimensions : 20 x 15 x5 cm.
+   attendu : FICHE PRODUIT — SPÉCIFICATIONS Modèle standard livré avec câble USB. Dimensions : 20 x 15 x 5 cm.
+I07.png attendu=positif predit=positif conf=0.4755 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIENT — 107.png NOTE DE SATISFACTION : 10/10 Superbe finition et emballage impeccable. Une boutique en ligne trés fiable.
+   attendu : NOTE DE SATISFACTION : 10/10 Superbe finition et emballage impeccable. Une boutique en ligne très fiable.
+I08.png attendu=negatif predit=negatif conf=0.6656 OK | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIEN 108.png TICKET DE CAISSE / LITIGE Erreur de facturation : montant débité deux fois. Aucun remboursement recu a ce jour.
+   attendu : TICKET DE CAISSE / LITIGE Erreur de facturation : montant débité deux fois. Aucun remboursement reçu à ce jour.
+I09.png attendu=neutre predit=negatif conf=0.3793 ERREUR | mots OCR corrects=100%
+   OCR     : CAPTURE AVIS CLIEN 109.png CONFIRMATION DE RECEPTION Commande #7783 bien réceptionnée. Statut : Livraison terminée.
+   attendu : CONFIRMATION DE RÉCEPTION Commande #7783 bien réceptionnée. Statut : Livraison terminée.
+Sentiments corrects : 7/9

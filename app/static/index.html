@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-commerce Customer Voice</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="entete">
+    <h1>E-commerce Customer Voice</h1>
+    <p>Analyse du sentiment des avis clients (positif, négatif, neutre) à partir d'un <strong>texte</strong>,
+       d'une <strong>image</strong> (OCR) ou d'un <strong>audio</strong> (transcription Whisper).
+       Un seul classifieur TF-IDF + régression logistique prend la décision finale.</p>
+  </header>
+
+  <main class="conteneur">
+    <section class="carte">
+      <div class="onglets" role="tablist">
+        <button class="onglet actif" data-mode="text" role="tab">Texte</button>
+        <button class="onglet" data-mode="image" role="tab">Image</button>
+        <button class="onglet" data-mode="audio" role="tab">Audio</button>
+      </div>
+
+      <div id="zone-text" class="zone">
+        <label for="champ-texte">Avis client</label>
+        <textarea id="champ-texte" rows="5" placeholder="Ex : Livraison rapide, produit conforme, je recommande !"></textarea>
+      </div>
+
+      <div id="zone-image" class="zone cachee">
+        <label>Image contenant du texte (png, jpg, bmp, webp - 5 Mo max)</label>
+        <input type="file" id="champ-image" accept="image/png,image/jpeg,image/bmp,image/webp" hidden>
+        <button type="button" class="bouton-secondaire" id="bouton-image">Sélectionner une image</button>
+        <span class="nom-fichier" id="nom-image">Aucun fichier choisi</span>
+        <img id="apercu-image" class="apercu cachee" alt="Aperçu de l'image">
+      </div>
+
+      <div id="zone-audio" class="zone cachee">
+        <label>Fichier audio (mp3, wav, ogg, flac, m4a - 10 Mo max)</label>
+        <input type="file" id="champ-audio" accept="audio/*" hidden>
+        <button type="button" class="bouton-secondaire" id="bouton-audio">Sélectionner un fichier audio</button>
+        <span class="nom-fichier" id="nom-audio">Aucun fichier choisi</span>
+        <audio id="lecteur-audio" class="apercu cachee" controls></audio>
+      </div>
+
+      <button type="button" class="bouton-principal" id="bouton-analyser">Analyser le sentiment</button>
+      <div id="chargement" class="chargement cachee"><span class="spinner"></span> Analyse en cours...</div>
+      <div id="erreur" class="erreur cachee" role="alert"></div>
+    </section>
+
+    <section class="carte cachee" id="resultat">
+      <h2>Résultat</h2>
+      <div class="sentiment" id="badge-sentiment"><span id="icone-sentiment"></span><span id="libelle-sentiment"></span></div>
+      <div class="confiance">
+        <div class="confiance-titre">Confiance : <strong id="valeur-confiance"></strong></div>
+        <div class="barre"><div class="barre-remplie" id="barre-confiance"></div></div>
+      </div>
+      <h3 id="titre-texte">Texte analysé</h3>
+      <blockquote id="texte-extrait"></blockquote>
+    </section>
+  </main>
+
+  <footer class="pied">Mini-projet ML - <a href="/docs">Documentation Swagger</a></footer>
+  <script src="/static/script.js"></script>
+</body>
+</html>
